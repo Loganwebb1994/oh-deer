@@ -1,5 +1,5 @@
 import React from "react"
-import "./stand.css"
+import "./Stand.css"
 import { Route } from "react-router-dom"
 
 //after you take out the hard coded date remember to pass in {props} to Stand()

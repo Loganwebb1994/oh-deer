@@ -9,12 +9,12 @@ export const StandProvider = (props) => {
     const getStands = () => {
       return fetch("http://localhost:8088/stands")
         .then(res => res.json())
-        .then(setLocations)
+        .then(setStands)
     }
 
     return(
       <StandContext.Provider value ={{
-        events, getEvents, addEvent, updateEvent, getEventById, getEventsByUserId, deleteEvent
+        getStands, stands, setStands
     }}>
         {props.children}
       </StandContext.Provider>

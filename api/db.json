@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "id":1,
+      "name": "Logan",
+      "email": "loganwebb1994@gmail.com",
+      "password": 69
+    }
+  ],
+  "stands": [
+    
+  ],
+  "notes": [],
+  "usersStands": []
+
+}

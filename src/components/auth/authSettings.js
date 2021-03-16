@@ -5,5 +5,5 @@ export const authApi = {
 }
 
 // The user id is saved under the key app_user_id in session Storage. Change below if needed!
-export const userStorageKey = "app_user_id"
+export const userStorageKey = "ohDeer_user"
 
