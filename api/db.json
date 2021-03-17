@@ -1,111 +1,109 @@
 {
   "users": [
     {
-      "id":1,
+      "id": 1,
       "name": "Logan",
-      "email": "loganwebb1994@gmail.com",
-      "password": 69
+      "email": "loganwebb1994@gmail.com"
     },
+  
     {
-      "id":1,
-      "name": "Russ",
-      "email": "russ@russ.com",
-      "password": 69
+      "email": "scortscort@scort.com",
+      "name": "Scott Silver",
+      "id": 2
     }
   ],
   "stands": [
     {
-      "id":1,
+      "id": 1,
       "name": "North",
       "location": "Neils Field"
     },
     {
-      "id":2,
+      "id": 2,
       "name": "East",
       "location": "Neils Field"
-    },    
+    },
     {
-      "id":3,
+      "id": 3,
       "name": "North",
       "location": "North River Field"
-    },    
+    },
     {
-      "id":4,
+      "id": 4,
       "name": "South",
       "location": "North River Field"
-    },    
+    },
     {
-      "id":5,
+      "id": 5,
       "name": "East",
       "location": "North River Field"
-    },    
+    },
     {
-      "id":6,
+      "id": 6,
       "name": "West",
       "location": "North River Field"
-    },    
+    },
     {
-      "id":7,
+      "id": 7,
       "name": "South",
       "location": "South River Field"
-    },    
+    },
     {
-      "id":8,
+      "id": 8,
       "name": "West",
       "location": "South River Field"
-    },    
+    },
     {
-      "id":9,
+      "id": 9,
       "name": "East",
       "location": "The Duck Hole"
-    },    
+    },
     {
-      "id":10,
+      "id": 10,
       "name": "West",
       "location": "The Duck Hole"
-    },    
+    },
     {
-      "id":11,
+      "id": 11,
       "name": "South",
       "location": "The Duck Hole"
-    },    
+    },
     {
-      "id":12,
+      "id": 12,
       "name": "North",
       "location": "The Bone Yard"
-    },    
+    },
     {
-      "id":13,
+      "id": 13,
       "name": "East",
       "location": "The Bone Yard"
-    },    
+    },
     {
-      "id":14,
+      "id": 14,
       "name": "West",
       "location": "The Bone Yard"
-    },    
+    },
     {
-      "id":15,
+      "id": 15,
       "name": "North",
       "location": "Slough Field"
-    },    
+    },
     {
-      "id":16,
+      "id": 16,
       "name": "South",
       "location": "Slough Field"
-    },    
+    },
     {
-      "id":17,
+      "id": 17,
       "name": "East",
       "location": "Lance's Honey Hole"
-    },    
+    },
     {
-      "id":18,
+      "id": 18,
       "name": "West",
       "location": "Lance's Honey Hole"
-    }   
+    }
   ],
   "notes": [],
   "usersStands": []
-
 }
