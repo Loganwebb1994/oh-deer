@@ -1,8 +1,21 @@
 import React from "react"
-import {StandList} from "./stands/StandList"
-import {Route} from "react-router-dom"
+import { Route } from "react-router-dom"
 
+import { StandList } from "./stands/StandList"
+import { StandProvider } from "./stands/StandProvider"
 
 export const ApplicationViews = () => {
-  return <StandList/>
+    return (
+        <>
+          
+            <Route exact path="/">
+              <StandProvider>
+                <StandList />
+              </StandProvider>
+            </Route>
+
+          
+            
+        </>
+    )
 }
