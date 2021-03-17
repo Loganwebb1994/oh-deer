@@ -1,0 +1,17 @@
+.stand{
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+  border: 10px;
+  border-color: black;
+}
+.stand__notes__delete{
+  width: 50px
+}
+.stand__notes__edit{
+  width: 100px
+}
+.standList{
+  display: flex;
+  flex-wrap: wrap;
+}

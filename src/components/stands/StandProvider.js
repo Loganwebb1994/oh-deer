@@ -12,9 +12,21 @@ export const StandProvider = (props) => {
         .then(setStands)
     }
 
+    const addStandNote = (eventObj) => {
+      return fetch("http://localhost:8088/stands", {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json"
+          },
+          body: JSON.stringify(eventObj)
+      })
+      .then(getStands)
+  }
+
+
     return(
       <StandContext.Provider value ={{
-        getStands, stands, setStands
+        getStands, stands, setStands, addStandNote
     }}>
         {props.children}
       </StandContext.Provider>
