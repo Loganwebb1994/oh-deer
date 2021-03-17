@@ -9,16 +9,16 @@ export const StandCard = ({stand}) => {
   return (
     <section className="stand">
         <h3 className="stand__name">{stand.name} Stand @ {stand.location}</h3>
-        <div className="stand__availability">Available</div>
-        <div className="stand__notes">
-          The straps for this stand are dry rotten and need to be replaced.
-          </div>
-          <button className="stand__notes__delete">X</button>
+        <div className="stand__availability">{stand.usersStand.availability}</div>
+        <div className="stand__notes">{stand.note}</div>
+        <div className="buttonContainer">
           <button className="stand__notes__edit">Edit Note</button>
+          <button className="stand__notes__delete">Delete Note</button>
+        </div>
         <div className="buttonContainer">
           <button className="stand__reserve">Reserve</button>
           <button className="stand__delete">Delete</button>
-          <button className="stand__addNote" onClick={() =>  {history.push("/events/create")}}>Make Note</button>
+          <button className="stand__addNote" onClick={() =>  {history.push("/create-note")}}>Make Note</button>
         </div>
     </section>
 )

@@ -96,14 +96,40 @@
     {
       "id": 17,
       "name": "East",
-      "location": "Lance's Honey Hole"
+      "location": "Lance's Secret Spot"
     },
     {
       "id": 18,
       "name": "West",
-      "location": "Lance's Honey Hole"
+      "location": "Lance's Secret Spot"
     }
   ],
-  "notes": [],
-  "usersStands": []
+  "notes": [
+    {
+      "id":1,
+      "content":"note",
+      "userId": 1,
+      "standId": 1
+    },
+    {
+      "id":2,
+      "content":"note2",
+      "userId": 1,
+      "standId": 1
+    },
+    {
+      "id":2,
+      "content":"note2",
+      "userId": 2,
+      "standId": 2
+    }
+  ],
+  "usersStands": [
+    {
+      "id":1,
+      "userId":1,
+      "standId":1,
+      "availability":true
+    }
+  ]
 }
