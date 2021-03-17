@@ -3,10 +3,10 @@ import "./Stand.css"
 import { Route } from "react-router-dom"
 
 //after you take out the hard coded date remember to pass in {props} to Stand()
-export const StandCard = (stand) => {
+export const StandCard = ({stand}) => {
   return (
     <section className="stand">
-        <h3 className="stand__name">{stand.name} @ {stand.location}</h3>
+        <h3 className="stand__name">{stand.name} Stand @ {stand.location}</h3>
         <div className="stand__availability">Available</div>
         <div className="stand__notes">
           <button className="stand__notes__delete">X</button>
