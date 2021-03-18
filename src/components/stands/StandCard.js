@@ -4,13 +4,13 @@ import { Route, useHistory } from "react-router-dom"
 
 
 //after you take out the hard coded date remember to pass in {props} to Stand()
-export const StandCard = ({stand}) => {
+export const StandCard = ({stand}, {note}) => {
   const history = useHistory()
   return (
     <section className="stand">
         <h3 className="stand__name">{stand.name} Stand @ {stand.location}</h3>
-        <div className="stand__availability">{stand.usersStand.availability}</div>
-        <div className="stand__notes">{stand.note}</div>
+        {/* <div className="stand__availability">{stand.usersStand.availability}</div> */}
+        {/* <div className="stand__notes">{note.content}</div> */}
         <div className="buttonContainer">
           <button className="stand__notes__edit">Edit Note</button>
           <button className="stand__notes__delete">Delete Note</button>

@@ -5,19 +5,23 @@ import "./Stand.css"
 
 export const StandList = () => {
 
-  const { stands, getStands } = useContext(StandContext)
+  const { stands, getStands, standNotes, getStandNotes } = useContext(StandContext)
 
 
   useEffect(() => {
     console.log("StandList: useEffect - getStands")
-    getStands()
+    getStandNotes()
+    .then(getStands())
 
   }, [])
 
+  useEffect(() =>{
+    
+  })
 
   return (
     <div className="standList">
-      {console.log("StandList: Render", stands)}
+      {console.log("StandList: Render", stands, standNotes)}
       {
         stands.map(stand => {
           return <StandCard key={stand.id} stand={stand} />

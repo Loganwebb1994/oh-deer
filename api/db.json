@@ -118,8 +118,8 @@
       "standId": 1
     },
     {
-      "id":2,
-      "content":"note2",
+      "id":3,
+      "content":"note3",
       "userId": 2,
       "standId": 2
     }
@@ -129,7 +129,7 @@
       "id":1,
       "userId":1,
       "standId":1,
-      "availability":true
+      "availability":false
     }
   ]
 }
