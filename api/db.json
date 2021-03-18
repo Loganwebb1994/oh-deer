@@ -129,7 +129,8 @@
       "id":1,
       "userId":1,
       "standId":1,
-      "availability":false
+      "availability":false,
+      "note":"Test Note"
     }
   ]
 }

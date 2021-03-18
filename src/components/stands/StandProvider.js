@@ -30,7 +30,15 @@ export const StandProvider = (props) => {
       })
       .then(getStands)
   }
-
+    const reserveStand = (userStandObj) => {
+      return fetch("http://localhost:8088/usersStands", {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json"
+          },
+          body: JSON.stringify(userStandObj)
+      })
+    }
 
     return(
       <StandContext.Provider value ={{
