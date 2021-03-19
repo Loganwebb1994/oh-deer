@@ -5,25 +5,27 @@ import { StandContext } from "./StandProvider"
 
 
 //after you take out the hard coded date remember to pass in {props} to Stand()
-export const StandCard = ({stand, userStandObj}) => {
-  const {reserveStand, setAvailability, checkOut, resetAvailability, userStand } = useContext(StandContext)
-  const history = useHistory()
+export const StandCard = ({stand}) => {
+  useEffect(() => {
+    getUsers()
+
+  }, [])
+  const {reserveStand, setAvailability, checkOut, resetAvailability, userStand, users, getUsers } = useContext(StandContext)
   const currentUserId = parseInt(sessionStorage.getItem("ohDeer_user"))
+  const currentUser = users.find(user => user.id === currentUserId)
+  console.log(currentUser, "current user")
+  const history = useHistory()
   let reservationObj = {
     userId: currentUserId,
     standId: stand.id,
     note: ""
   }
 
-  useEffect(() => {
-    console.log("StandCard: useEffect - usersStands")
-
-  }, [])
 
   return (
     <section className="stand">
         <h3 className="stand__name">{stand.name} Stand @ {stand.location}</h3>
-        <div className="stand__availability">{stand.availability === true? "available": "Occupied"}</div>
+        <div className="stand__availability">{stand.availability === true? "available": currentUser?.name}</div>
         <div className="stand__notes">{userStand.note}</div>
         <div className="buttonContainer">
           <button className="stand__notes__edit">Edit Note</button>
