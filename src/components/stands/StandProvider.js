@@ -22,7 +22,7 @@ export const StandProvider = (props) => {
     }
 
     const getStandNotes = () => {
-      return fetch(`http://localhost:8088/usersStands`)
+      return fetch(`http://localhost:8088/userStands`)
         .then(res => res.json())
         .then(setStandNotes)
     }
@@ -39,7 +39,7 @@ export const StandProvider = (props) => {
     // }
     
     const reserveStand = (userStandObj) => {
-      return fetch("http://localhost:8088/usersStands", {
+      return fetch("http://localhost:8088/userStands", {
           method: "POST",
           headers: {
               "Content-Type": "application/json"
@@ -51,7 +51,7 @@ export const StandProvider = (props) => {
       }
 
     const checkOut = (userObjId) => {
-      return fetch(`http://localhost:8088/usersStands/${userObjId}`, {
+      return fetch(`http://localhost:8088/userStands/${userObjId}`, {
           method: "DELETE"
       })
           .then(getStandNotes)
