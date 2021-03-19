@@ -8,8 +8,8 @@ import { StandContext } from "./StandProvider"
 export const StandCard = ({stand, relationship}) => {
   useEffect(() => {
     getUsers()
-
-  }, [])
+    }, [])
+    
   const {reserveStand, setAvailability, checkOut, resetAvailability, userStand, users, getUsers } = useContext(StandContext)
   const currentUserId = parseInt(sessionStorage.getItem("ohDeer_user"))
   const currentUser = users.find(user => user.id === currentUserId)
