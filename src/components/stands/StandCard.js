@@ -23,7 +23,7 @@ export const StandCard = ({stand, note}) => {
   return (
     <section className="stand">
         <h3 className="stand__name">{stand.name} Stand @ {stand.location}</h3>
-        <div className="stand__availability">{stand.availability}</div>
+        <div className="stand__availability">{stand.availability === true? "available": "Occupied"}</div>
         <div className="stand__notes">{note?.content}</div>
         <div className="buttonContainer">
           <button className="stand__notes__edit">Edit Note</button>
