@@ -9,7 +9,6 @@ export const StandList = () => {
 
 
   useEffect(() => {
-    console.log("StandList: useEffect - getStands")
     getStandNotes()
     .then(getStands)
 
@@ -20,11 +19,10 @@ export const StandList = () => {
   
   return (
     <div className="standList">
-      {console.log("StandList: Render", stands, userStand)}
       {
         stands.map(stand => { 
           const standNote = standNotes.filter(note => note.standId === stand.id)
-          return <StandCard key={stand.id} stand={stand} userStand={userStand} />
+          return <StandCard key={stand.id} stand={stand} relationship={userStand} />
         })
       }
     </div>
