@@ -5,8 +5,11 @@ import "./Stand.css"
 
 export const StandList = () => {
 
-  const { stands, getStands, standNotes, getStandNotes, userStand } = useContext(StandContext)
+  const { stands, getStands, standNotes, getStandNotes, userStand, getUsers } = useContext(StandContext)
 
+  useEffect(() => {
+    getUsers()
+    }, [])
 
   useEffect(() => {
     getStandNotes()
