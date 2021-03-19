@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext, useEffect } from "react"
 import "./Stand.css"
 import { Route, useHistory } from "react-router-dom"
 import { StandContext } from "./StandProvider"
@@ -14,6 +14,14 @@ export const StandCard = ({stand, note}) => {
     standId: stand.id,
     note: ""
   }
+
+  useEffect(() => {
+    console.log("StandCard: useEffect - usersStands")
+    getStandNotes()
+    .then(getStands)
+
+  }, [])
+
   return (
     <section className="stand">
         <h3 className="stand__name">{stand.name} Stand @ {stand.location}</h3>
