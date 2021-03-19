@@ -14,6 +14,10 @@ export const ApplicationViews = () => {
               </StandProvider>
             </Route>
 
+            <Route exact path="/add-note">
+              
+            </Route>
+
           
             
         </>
