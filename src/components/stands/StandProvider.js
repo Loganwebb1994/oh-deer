@@ -7,6 +7,13 @@ export const StandProvider = (props) => {
     const [stands, setStands] = useState([])
     const [standNotes, setStandNotes] = useState([])
     const [userStand, setUserStand] = useState([])
+    const [users, setUsers] = useState([])
+
+    const getUsers = () => {
+      return fetch("http://localhost:8088/users")
+        .then(res => res.json())
+        .then(setUsers)
+    }
 
     const getStands = () => {
       return fetch("http://localhost:8088/stands")
@@ -77,7 +84,7 @@ export const StandProvider = (props) => {
         
         return(
       <StandContext.Provider value ={{
-        getStands, stands, setStands, getStandNotes, standNotes, setStandNotes, reserveStand, setAvailability, checkOut, resetAvailability, userStand
+        getStands, stands, setStands, getStandNotes, standNotes, setStandNotes, reserveStand, setAvailability, checkOut, resetAvailability, userStand, getUsers, users
       }}>
         {props.children}
       </StandContext.Provider>
