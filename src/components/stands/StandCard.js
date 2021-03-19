@@ -6,7 +6,7 @@ import { StandContext } from "./StandProvider"
 
 //after you take out the hard coded date remember to pass in {props} to Stand()
 export const StandCard = ({stand, note}) => {
-  const {reserveStand, setAvailability} = useContext(StandContext)
+  const {reserveStand, setAvailability, checkOut, resetAvailability } = useContext(StandContext)
   const history = useHistory()
   const currentUserId = sessionStorage.getItem("ohDeer_user")
   let reservationObj = {
@@ -30,7 +30,8 @@ export const StandCard = ({stand, note}) => {
           <button className="stand__notes__delete">Delete Note</button>
         </div>
         <div className="buttonContainer">
-          <button className="stand__reserve" onClick={() =>{if (stand.availability === true){reserveStand(reservationObj).then(setAvailability(stand.id))}}}>Reserve</button>
+          <button className="stand__reserve" onClick={() =>{if (stand.availability === true){reserveStand(reservationObj).then(setAvailability(stand.id))}}}>Check In</button>
+          {stand.availability === false? (<button className="stand__checkOut" onClick={() =>{checkOut(reservationObj.id).then(resetAvailability(stand.id))}}>Check Out</button>): ""}
           <button className="stand__delete">Delete</button>
           <button className="stand__addNote" onClick={() =>  {history.push("/create-note")}}>Make Note</button>
         </div>
