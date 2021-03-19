@@ -39,10 +39,12 @@ export const StandProvider = (props) => {
           },
           body: JSON.stringify(userStandObj)
         })
+        .then(res => res.json())
+        .then(setUserStand)
       }
 
     const checkOut = (userObjId) => {
-      return fetch(`http://localhost:8088/userStands/${userObjId}`, {
+      return fetch(`http://localhost:8088/usersStands/${userObjId}`, {
           method: "DELETE"
       })
           .then(getStandNotes)
@@ -75,7 +77,7 @@ export const StandProvider = (props) => {
         
         return(
       <StandContext.Provider value ={{
-        getStands, stands, setStands, getStandNotes, standNotes, setStandNotes, reserveStand, setAvailability, checkOut, resetAvailability
+        getStands, stands, setStands, getStandNotes, standNotes, setStandNotes, reserveStand, setAvailability, checkOut, resetAvailability, userStand
       }}>
         {props.children}
       </StandContext.Provider>
