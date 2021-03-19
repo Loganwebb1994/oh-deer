@@ -16,7 +16,7 @@
       "id": 1,
       "name": "North",
       "location": "Neils Field",
-      "availability": false
+      "availability": true
     },
     {
       "id": 2,

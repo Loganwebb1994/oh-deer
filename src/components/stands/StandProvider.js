@@ -6,6 +6,7 @@ export const StandProvider = (props) => {
     
     const [stands, setStands] = useState([])
     const [standNotes, setStandNotes] = useState([])
+    const [userStand, setUserStand] = useState([])
 
     const getStands = () => {
       return fetch("http://localhost:8088/stands")
@@ -18,18 +19,18 @@ export const StandProvider = (props) => {
         .then(res => res.json())
         .then(setStandNotes)
     }
-
-  //  { http://localhost:8088/usersStands?_expand=user&_expand=stand} not sure how to implement this yet
-    const addStandNote = (standObj) => {
-      return fetch("http://localhost:8088/notes", {
-          method: "POST",
-          headers: {
-              "Content-Type": "application/json"
-          },
-          body: JSON.stringify(standObj)
-      })
-      .then(getStands)
-  }
+    //needs refactoring after erd change
+    // const addStandNote = (standObj) => {
+    //   return fetch("http://localhost:8088/notes", {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json"
+    //     },
+    //       body: JSON.stringify(standObj)
+    //     })
+    //   .then(getStands)
+    // }
+    
     const reserveStand = (userStandObj) => {
       return fetch("http://localhost:8088/usersStands", {
           method: "POST",
@@ -37,24 +38,48 @@ export const StandProvider = (props) => {
               "Content-Type": "application/json"
           },
           body: JSON.stringify(userStandObj)
+        })
+      }
+
+    const checkOut = (userObjId) => {
+      return fetch(`http://localhost:8088/userStands/${userObjId}`, {
+          method: "DELETE"
       })
+          .then(getStandNotes)
     }
-    const setAvailability = (standId) => {
+      
+      const setAvailability = (standId) => {
       fetch(`http://localhost:8088/stands/${standId}`, {
         method: "PATCH",
-          body: JSON.stringify({
+        body: JSON.stringify({
           availability: false
-          }),
+        }),
         headers: {
           "Content-type": "application/json; charset=UTF-8"
-          }})}
+        }})
+      .then(getStands)
+      }
 
-    return(
+      const resetAvailability = (standId) => {
+        fetch(`http://localhost:8088/stands/${standId}`, {
+        method: "PATCH",
+        body: JSON.stringify({
+          availability: true
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8"
+        }})
+      .then(getStands)
+      }
+          
+        
+        return(
       <StandContext.Provider value ={{
-        getStands, stands, setStands, addStandNote, getStandNotes, standNotes, setStandNotes, reserveStand, setAvailability
-    }}>
+        getStands, stands, setStands, getStandNotes, standNotes, setStandNotes, reserveStand, setAvailability, checkOut, resetAvailability
+      }}>
         {props.children}
       </StandContext.Provider>
     )
-
+    
 }
+    //  { http://localhost:8088/usersStands?_expand=user&_expand=stand} not sure how to implement this yet
