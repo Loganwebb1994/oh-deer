@@ -17,8 +17,6 @@ export const StandCard = ({stand, note}) => {
 
   useEffect(() => {
     console.log("StandCard: useEffect - usersStands")
-    getStandNotes()
-    .then(getStands)
 
   }, [])
 
