@@ -5,7 +5,6 @@
       "name": "Logan",
       "email": "loganwebb1994@gmail.com"
     },
-  
     {
       "email": "scortscort@scort.com",
       "name": "Scott Silver",
@@ -16,121 +15,118 @@
     {
       "id": 1,
       "name": "North",
-      "location": "Neils Field"
+      "location": "Neils Field",
+      "availability": false
     },
     {
       "id": 2,
       "name": "East",
-      "location": "Neils Field"
+      "location": "Neils Field",
+      "availability": true
     },
     {
       "id": 3,
       "name": "North",
-      "location": "North River Field"
+      "location": "North River Field",
+      "availability": true
     },
     {
       "id": 4,
       "name": "South",
-      "location": "North River Field"
+      "location": "North River Field",
+      "availability": true
     },
     {
       "id": 5,
       "name": "East",
-      "location": "North River Field"
+      "location": "North River Field",
+      "availability": true
     },
     {
       "id": 6,
       "name": "West",
-      "location": "North River Field"
+      "location": "North River Field",
+      "availability": true
     },
     {
       "id": 7,
       "name": "South",
-      "location": "South River Field"
+      "location": "South River Field",
+      "availability": true
     },
     {
       "id": 8,
       "name": "West",
-      "location": "South River Field"
+      "location": "South River Field",
+      "availability": true
     },
     {
       "id": 9,
       "name": "East",
-      "location": "The Duck Hole"
+      "location": "The Duck Hole",
+      "availability": true
     },
     {
       "id": 10,
       "name": "West",
-      "location": "The Duck Hole"
+      "location": "The Duck Hole",
+      "availability": true
     },
     {
       "id": 11,
       "name": "South",
-      "location": "The Duck Hole"
+      "location": "The Duck Hole",
+      "availability": true
     },
     {
       "id": 12,
       "name": "North",
-      "location": "The Bone Yard"
+      "location": "The Bone Yard",
+      "availability": true
     },
     {
       "id": 13,
       "name": "East",
-      "location": "The Bone Yard"
+      "location": "The Bone Yard",
+      "availability": true
     },
     {
       "id": 14,
       "name": "West",
-      "location": "The Bone Yard"
+      "location": "The Bone Yard",
+      "availability": true
     },
     {
       "id": 15,
       "name": "North",
-      "location": "Slough Field"
+      "location": "Slough Field",
+      "availability": true
     },
     {
       "id": 16,
       "name": "South",
-      "location": "Slough Field"
+      "location": "Slough Field",
+      "availability": true
     },
     {
       "id": 17,
       "name": "East",
-      "location": "Lance's Secret Spot"
+      "location": "Lance's Secret Spot",
+      "availability": true
     },
     {
       "id": 18,
       "name": "West",
-      "location": "Lance's Secret Spot"
-    }
-  ],
-  "notes": [
-    {
-      "id":1,
-      "content":"note",
-      "userId": 1,
-      "standId": 1
-    },
-    {
-      "id":2,
-      "content":"note2",
-      "userId": 1,
-      "standId": 3
-    },
-    {
-      "id":3,
-      "content":"note3",
-      "userId": 2,
-      "standId": 2
+      "location": "Lance's Secret Spot",
+      "availability": true
     }
   ],
   "usersStands": [
     {
-      "id":1,
-      "userId":1,
-      "standId":1,
-      "availability":false,
-      "note":"Test Note"
+      "id": 1,
+      "userId": 1,
+      "standId": 1,
+      "note": "Test Note"
     }
   ]
 }
