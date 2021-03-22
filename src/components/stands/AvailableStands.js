@@ -8,13 +8,10 @@ export const AvailableStands = () => {
   const history = useHistory()
   const { stands, getStands, getUserStands, userStands, getUsers } = useContext(StandContext)
 
-  useEffect(() => {
-    getUsers()
-    }, [])
 
   useEffect(() => {
     getUserStands()
-    .then(getStands())
+    // .then(getStands)
 
   }, [])
 
@@ -23,7 +20,7 @@ export const AvailableStands = () => {
   
   return (
   <>
-  <button onClick={history.push("/")}>All Stands</button>
+  <button onClick={() => history.push("/")}>All Stands</button>
     <div className="standList">
       {
         filteredStands.map(stand => { let notesForStand = userStands.filter(userStand => userStand.standId === stand.id  )

@@ -23,7 +23,7 @@ export const StandCard = ({ stand, relationships }) => {
         note: ""
       }
       reserveStand(reservationObj)
-      .then(setAvailability(stand.id)) 
+      .then(() => setAvailability(stand.id)) 
     }
   }
 
