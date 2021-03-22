@@ -27,15 +27,14 @@ export const StandCard = ({ stand, relationships }) => {
     }
   }
 
-  console.log(relationships)
-
+  
   return (
     <section className="stand">
       <h3 className="stand__name">{stand.name} Stand @ {stand.location}</h3>
       <div className="stand__availability">{stand.availability === true ? "available" : currentUser?.name}</div>
       <div className="stand__notes">{relationships.map(relationship => relationship.note)}</div>
       <div className="buttonContainer">
-        <button className="stand__notes__edit">Edit Note</button>
+        <button className="stand__notes__edit" id= {stand.id}>Edit Note</button>
         <button className="stand__notes__delete">Delete Note</button>
       </div>
       <div className="buttonContainer">

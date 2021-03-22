@@ -16,13 +16,13 @@
       "id": 1,
       "name": "North",
       "location": "Neils Field",
-      "availability": true
+      "availability": false
     },
     {
       "id": 2,
       "name": "East",
       "location": "Neils Field",
-      "availability": true
+      "availability": false
     },
     {
       "id": 3,
@@ -151,6 +151,24 @@
       "standId": 3,
       "note": "note",
       "id": 5
+    },
+    {
+      "userId": 1,
+      "standId": 1,
+      "note": "",
+      "id": 6
+    },
+    {
+      "userId": 1,
+      "standId": 1,
+      "note": "",
+      "id": 7
+    },
+    {
+      "userId": 1,
+      "standId": 2,
+      "note": "",
+      "id": 8
     }
   ]
 }

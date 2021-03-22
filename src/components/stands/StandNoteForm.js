@@ -4,5 +4,7 @@ import "./Stand.css"
 import { useHistory } from 'react-router-dom';
 
 export const StandNoteForm = () => {
-    return ("Note Form")
+    const [note, setNotes] = useState({
+        note: ""
+    })
 }

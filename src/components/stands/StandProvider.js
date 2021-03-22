@@ -7,6 +7,8 @@ export const StandProvider = (props) => {
     const [stands, setStands] = useState([])
     const [userStands, setUserStands] = useState([])
     const [users, setUsers] = useState([])
+    // const currentUserId = sessionStorage.getItem("ohDeer_user")
+    // const[currentRelationship]
 
     const getUsers = () => {
       return fetch("http://localhost:8088/users")
@@ -68,6 +70,17 @@ export const StandProvider = (props) => {
         }})
       .then(getStands)
       }
+
+      // const addNote = () => {
+      //   fetch(`http://localhost:8088/userStands?userId=${currentUserId}`, {
+      //   method: "PATCH",
+      //   body: JSON.stringify({
+      //     note: ""
+      //   }),
+      //   headers: {
+      //     "Content-type": "application/json; charset=UTF-8"
+      //   }})
+      // }
           
         
         return(
