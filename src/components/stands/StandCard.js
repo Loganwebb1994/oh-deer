@@ -5,10 +5,10 @@ import { StandContext } from "./StandProvider"
 
 
 //after you take out the hard coded date remember to pass in {props} to Stand()
-export const StandCard = ({ stand, relationship }) => {
+export const StandCard = ({ stand, relationships }) => {
 
 
-  const { reserveStand, setAvailability, checkOut, resetAvailability, userStand, users, getUsers } = useContext(StandContext)
+  const { reserveStand, setAvailability, resetAvailability, userStand, users, getUsers } = useContext(StandContext)
   const currentUserId = parseInt(sessionStorage.getItem("ohDeer_user"))
   const currentUser = users.find(user => user.id === currentUserId)
   const history = useHistory()
@@ -27,11 +27,13 @@ export const StandCard = ({ stand, relationship }) => {
     }
   }
 
+  console.log(relationships)
+
   return (
     <section className="stand">
       <h3 className="stand__name">{stand.name} Stand @ {stand.location}</h3>
       <div className="stand__availability">{stand.availability === true ? "available" : currentUser?.name}</div>
-      <div className="stand__notes">{relationship?.note}</div>
+      <div className="stand__notes">{relationships.map(relationship => relationship.note)}</div>
       <div className="buttonContainer">
         <button className="stand__notes__edit">Edit Note</button>
         <button className="stand__notes__delete">Delete Note</button>

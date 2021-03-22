@@ -18,14 +18,15 @@ export const StandList = () => {
   }, [])
 
     console.log(userStands)
-  let notesForStand = []
+  
   
   return (
   
     <div className="standList">
       {
-        stands.map(stand => { userStands.filter(userStand => userStand.standId ===stand.id? notesForStand.push(userStand) : "" )
-          return <StandCard key={stand.id} stand={stand} relationship={notesForStand} />
+        stands.map(stand => { let notesForStand = userStands.filter(userStand => userStand.standId === stand.id  )
+          {console.log(notesForStand, "standNote")}
+          return <StandCard key={stand.id} stand={stand} relationships={notesForStand} />
         })
       }
     </div>
