@@ -5,8 +5,7 @@ export const StandContext = createContext()
 export const StandProvider = (props) => {
     
     const [stands, setStands] = useState([])
-    const [standNotes, setStandNotes] = useState([])
-    const [userStand, setUserStand] = useState([])
+    const [userStands, setUserStands] = useState([])
     const [users, setUsers] = useState([])
 
     const getUsers = () => {
@@ -21,23 +20,12 @@ export const StandProvider = (props) => {
         .then(setStands)
     }
 
-    const getStandNotes = () => {
+    const getUserStands = () => {
       return fetch(`http://localhost:8088/userStands`)
         .then(res => res.json())
-        .then(setStandNotes)
+        .then(setUserStands)
     }
-    //needs refactoring after erd change
-    // const addStandNote = (standObj) => {
-    //   return fetch("http://localhost:8088/notes", {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json"
-    //     },
-    //       body: JSON.stringify(standObj)
-    //     })
-    //   .then(getStands)
-    // }
-    
+
     const reserveStand = (userStandObj) => {
       return fetch("http://localhost:8088/userStands", {
           method: "POST",
@@ -47,14 +35,14 @@ export const StandProvider = (props) => {
           body: JSON.stringify(userStandObj)
         })
         .then(res => res.json())
-        .then(setUserStand)
+        .then(setUserStands)
       }
 
     const checkOut = (userObjId) => {
       return fetch(`http://localhost:8088/userStands/${userObjId}`, {
           method: "DELETE"
       })
-          .then(getStandNotes)
+          .then(getUserStands)
     }
       
       const setAvailability = (standId) => {
@@ -84,7 +72,7 @@ export const StandProvider = (props) => {
         
         return(
       <StandContext.Provider value ={{
-        getStands, stands, setStands, getStandNotes, standNotes, setStandNotes, reserveStand, setAvailability, checkOut, resetAvailability, userStand, getUsers, users
+        getStands, stands, setStands, getUserStands, setUserStands, reserveStand, setAvailability, checkOut, resetAvailability, userStands, getUsers, users
       }}>
         {props.children}
       </StandContext.Provider>

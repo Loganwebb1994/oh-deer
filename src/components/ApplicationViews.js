@@ -2,6 +2,7 @@ import React from "react"
 import { Route } from "react-router-dom"
 
 import { StandList } from "./stands/StandList"
+import { StandNoteForm } from "./stands/StandNoteForm"
 import { StandProvider } from "./stands/StandProvider"
 
 export const ApplicationViews = () => {
@@ -15,7 +16,7 @@ export const ApplicationViews = () => {
             </Route>
 
             <Route exact path="/add-note">
-              
+              <StandNoteForm />
             </Route>
 
           
