@@ -71,7 +71,7 @@ export const StandProvider = (props) => {
       .then(getStands)
       }
 
-      const addNote = () => {
+      const addNote = (currentUserId) => {
         fetch(`http://localhost:8088/userStands?userId=${currentUserId}`, {
         method: "PATCH",
         body: JSON.stringify({

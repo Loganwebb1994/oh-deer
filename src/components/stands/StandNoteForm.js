@@ -9,7 +9,6 @@ export const StandNoteForm = () => {
         getUserStands()
     
         }, [])
-    const 
     const [note, setNotes] = useState({
         note: ""
     })
@@ -18,7 +17,7 @@ export const StandNoteForm = () => {
     return(
         <form>
             <label htmlFor="note">Stand Note: </label>
-            <input id="note" type="textArea" value={userStand.note}/>
+            <input id="note" type="textArea" />
             <button>Save</button>
         </form>
     )
