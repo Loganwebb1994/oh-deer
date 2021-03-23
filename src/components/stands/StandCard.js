@@ -13,6 +13,11 @@ export const StandCard = ({ stand, relationships }) => {
   const currentUser = users.find(user => user.id === currentUserId)
   const history = useHistory()
 
+  useEffect(() => {
+    getUsers()
+
+  }, [])
+
 
   const handleReserve = () => {
     console.log("hello")
@@ -36,12 +41,12 @@ export const StandCard = ({ stand, relationships }) => {
       <div className="buttonContainer">
         <button className="stand__notes__edit" id= {stand.id}>Edit Note</button>
         <button className="stand__notes__delete">Delete Note</button>
+        <button className="stand__addNote" onClick={() => { history.push("/add-note") }}>Make Note</button>
       </div>
+        {/* <button className="stand__delete">Delete</button> */}
       <div className="buttonContainer">
         <button className="stand__reserve" onClick={handleReserve}>Check In</button>
         {stand.availability === false ? (<button id="" className="stand__checkOut" onClick={() => { resetAvailability(stand.id) }}>Check Out</button>) : ""}
-        <button className="stand__delete">Delete</button>
-        <button className="stand__addNote" onClick={() => { history.push("/add-note") }}>Make Note</button>
       </div>
     </section>
   )

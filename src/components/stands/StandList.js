@@ -13,7 +13,7 @@ export const StandList = () => {
   useEffect(() => {
     getUserStands()
     .then(getStands)
-    console.log("use effect list", userStands)
+
 
   }, [])
 
