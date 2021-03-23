@@ -14,6 +14,7 @@ export const StandList = () => {
     getUserStands()
     .then(getStands)
 
+
   }, [])
 
 
@@ -21,8 +22,10 @@ export const StandList = () => {
   
   return (
   <>
+  
     <div className="standList">
     <button onClick={() => history.push("/available-stands")}>Available Stands</button>
+    <button onClick={() => history.push("/reserved-stands")}>Reserved Stands</button>
       {
         stands.map(stand => { let notesForStand = userStands.filter(userStand => userStand.standId === stand.id  )
           return <StandCard key={stand.id} stand={stand} relationships={notesForStand} />

@@ -4,7 +4,7 @@ import { StandCard } from "./StandCard"
 import { Route, useHistory } from "react-router-dom"
 import "./Stand.css"
 
-export const AvailableStands = () => {
+export const ReservedStands = () => {
   const history = useHistory()
   const { stands, getStands, getUserStands, userStands, getUsers } = useContext(StandContext)
 
@@ -15,7 +15,7 @@ export const AvailableStands = () => {
 
   }, [])
 
-  const filteredStands = stands.filter(stand => stand.availability === true)
+  const filteredStands = stands.filter(stand => stand.availability === false)
   
   
   return (

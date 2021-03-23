@@ -37,7 +37,7 @@ export const StandProvider = (props) => {
           body: JSON.stringify(userStandObj)
         })
         .then(res => res.json())
-        .then(setUserStands)
+        // .then(setUserStands)
       }
 
     const checkOut = (userObjId) => {
