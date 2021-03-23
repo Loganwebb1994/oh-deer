@@ -71,16 +71,16 @@ export const StandProvider = (props) => {
       .then(getStands)
       }
 
-      // const addNote = () => {
-      //   fetch(`http://localhost:8088/userStands?userId=${currentUserId}`, {
-      //   method: "PATCH",
-      //   body: JSON.stringify({
-      //     note: ""
-      //   }),
-      //   headers: {
-      //     "Content-type": "application/json; charset=UTF-8"
-      //   }})
-      // }
+      const addNote = () => {
+        fetch(`http://localhost:8088/userStands?userId=${currentUserId}`, {
+        method: "PATCH",
+        body: JSON.stringify({
+          note: ""
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8"
+        }})
+      }
           
         
         return(
