@@ -71,11 +71,11 @@ export const StandProvider = (props) => {
       .then(getStands)
       }
 
-      const addNote = (currentUserId) => {
+      const addNote = (currentUserId, noteString) => {
         fetch(`http://localhost:8088/userStands?userId=${currentUserId}`, {
         method: "PATCH",
         body: JSON.stringify({
-          note: ""
+          note: {noteString}
         }),
         headers: {
           "Content-type": "application/json; charset=UTF-8"
@@ -85,7 +85,7 @@ export const StandProvider = (props) => {
         
         return(
       <StandContext.Provider value ={{
-        getStands, stands, setStands, getUserStands, setUserStands, reserveStand, setAvailability, checkOut, resetAvailability, userStands, getUsers, users
+        getStands, stands, setStands, getUserStands, setUserStands, reserveStand, setAvailability, checkOut, resetAvailability, userStands, getUsers, users, addNote
       }}>
         {props.children}
       </StandContext.Provider>

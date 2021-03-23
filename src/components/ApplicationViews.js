@@ -14,7 +14,7 @@ export const ApplicationViews = () => {
                   <Route exact path="/">
                     <StandList />
                   </Route>
-                  <Route exact path="/add-note">
+                  <Route exact path="/stands/:userStandId(\d+)">
                     <StandNoteForm />
                   </Route>
                   <Route exact path="/available-stands">

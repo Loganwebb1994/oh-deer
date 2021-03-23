@@ -37,7 +37,7 @@ export const StandCard = ({ stand, relationships }) => {
       <>
       <button className="stand__notes__edit" id= {stand.id}>Edit Notes</button>
       <button className="stand__notes__delete">Delete Note</button>
-      <button className="stand__addNote" onClick={() => { history.push("/add-note") }}>Make Note</button>
+      <button className="stand__addNote" onClick={() => { history.push(`/stands/${stand.id}`) }}>Make Note</button>
       </>
     )
   }
