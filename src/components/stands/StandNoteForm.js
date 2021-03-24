@@ -16,6 +16,7 @@ export const StandNoteForm = () => {
         note: ""
     })
     const handleInputChange = (event) => {
+        console.log(event)
         const newNote = { ...note }
         newNote[event.target.id] = event.target.value
         setNote(newNote)
@@ -26,7 +27,7 @@ export const StandNoteForm = () => {
         addNote(currentUserId, note)
         .then(() => history.push("/"))
     }
- 
+
     return(
         <div>
             <label htmlFor="note">Stand Note: </label>

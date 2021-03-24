@@ -40,6 +40,8 @@ export const StandCard = ({ stand, relationships }) => {
       <button className="stand__addNote" onClick={() => { history.push(`/stands/${stand.id}`) }}>Make Note</button>
       </>
     )
+
+ 
   }
   
   return (
@@ -52,7 +54,7 @@ export const StandCard = ({ stand, relationships }) => {
       </div>
         {/* <button className="stand__delete">Delete</button> */}
       <div className="buttonContainer">
-        <button className="stand__reserve" onClick={handleReserve}>Check In</button>
+        {stand.availability === true ? (<button className="stand__reserve" onClick={handleReserve}>Check In</button>) : ""}
         {stand.availability === false ? (<button id="" className="stand__checkOut" onClick={() => { resetAvailability(stand.id) }}>Check Out</button>) : ""}
       </div>
     </section>
