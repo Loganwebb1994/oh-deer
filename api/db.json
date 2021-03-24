@@ -22,7 +22,7 @@
       "id": 2,
       "name": "East",
       "location": "Neils Field",
-      "availability": true
+      "availability": false
     },
     {
       "id": 3,
@@ -130,27 +130,45 @@
     },
     {
       "userId": 1,
-      "standId": 1,
+      "standId": 2,
       "note": "",
       "id": 2
     },
     {
       "userId": 1,
-      "standId": 2,
-      "note": "make a note",
+      "standId": 6,
+      "note": "",
       "id": 3
     },
     {
       "userId": 1,
-      "standId": 3,
-      "note": "",
+      "standId": 6,
+      "note": "making note",
       "id": 4
+    },
+    {
+      "userId": 1,
+      "standId": 2,
+      "note": "making note",
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "standId": 5,
+      "note": "make a notes",
+      "id": 6
+    },
+    {
+      "userId": 1,
+      "standId": 2,
+      "note": "",
+      "id": 7
     },
     {
       "userId": 1,
       "standId": 4,
       "note": "",
-      "id": 5
+      "id": 8
     }
   ]
 }

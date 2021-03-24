@@ -18,7 +18,6 @@ export const StandCard = ({ stand, relationships }) => {
 
   }, [])
 
-  const emptyNote = ""
   const handleReserve = () => {
     if (stand.availability === true) { 
       const reservationObj = {
@@ -30,17 +29,13 @@ export const StandCard = ({ stand, relationships }) => {
       .then(() => setAvailability(stand.id)) 
     }
   }
-  const deleteNote = (event) => {
-    
-    event.preventDefault()
-    addNote(emptyNote, userStandId)
-}
+
 
   const renderNoteButtons = () => {
     return(
       <>
       {console.log(userStandId)}
-      <button className="stand__notes__edit" id= {stand.id}>Edit Notes</button>
+      <button className="stand__notes__edit" onClick={() => {history.push(`/stands/${stand.id}`)}} id= {stand.id}>Edit Notes</button>
       <button className="stand__notes__delete" onClick={() => addNote({note:""}, userStandId )}>Delete Note</button>
       <button className="stand__addNote" onClick={() => { history.push(`/stands/${stand.id}`) }}>Make Note</button>
       </>

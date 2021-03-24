@@ -29,6 +29,11 @@ export const StandProvider = (props) => {
         .then(setUserStands)
     }
 
+    const getUserStandById = (id) => {
+      return fetch(`http://localhost:8088/userStands/${id}`)
+      .then(res => res.json())
+    }
+
     const reserveStand = (userStandObj) => {
       return fetch("http://localhost:8088/userStands", {
           method: "POST",
@@ -87,7 +92,7 @@ export const StandProvider = (props) => {
         
         return(
       <StandContext.Provider value ={{
-        getStands, stands, setStands, getUserStands, setUserStands, reserveStand, setAvailability, checkOut, resetAvailability, userStands, getUsers, users, addNote, userStandId
+        getStands, stands, setStands, getUserStands, setUserStands, reserveStand, setAvailability, checkOut, resetAvailability, userStands, getUsers, users, addNote, userStandId,getUserStandById
       }}>
         {props.children}
       </StandContext.Provider>
