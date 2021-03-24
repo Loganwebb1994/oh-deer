@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom';
 
 export const StandNoteForm = () => {
     const history = useHistory()
-    const {getUserStands, addNote} = useContext(StandContext)
+    const {getUserStands, addNote, userStandId} = useContext(StandContext)
 
     const currentUserId = parseInt(sessionStorage.getItem("ohDeer_user"))
     useEffect(() => {
@@ -24,7 +24,7 @@ export const StandNoteForm = () => {
 
     const saveNote = (event) => {
         event.preventDefault()
-        addNote(currentUserId, note)
+        addNote(note, userStandId)
         .then(() => history.push("/"))
     }
 
