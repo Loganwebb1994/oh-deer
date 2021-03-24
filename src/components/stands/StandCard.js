@@ -8,7 +8,7 @@ import { StandContext } from "./StandProvider"
 export const StandCard = ({ stand, relationships }) => {
 
 
-  const { reserveStand, setAvailability, resetAvailability, userStand, users, getUsers } = useContext(StandContext)
+  const { reserveStand, setAvailability, resetAvailability, userStand, users, getUsers, addNote, userStandId } = useContext(StandContext)
   const currentUserId = parseInt(sessionStorage.getItem("ohDeer_user"))
   const currentUser = users.find(user => user.id === currentUserId)
   const history = useHistory()
@@ -18,9 +18,8 @@ export const StandCard = ({ stand, relationships }) => {
 
   }, [])
 
-
+  const emptyNote = ""
   const handleReserve = () => {
-    console.log("hello")
     if (stand.availability === true) { 
       const reservationObj = {
         userId: currentUserId,
@@ -31,12 +30,18 @@ export const StandCard = ({ stand, relationships }) => {
       .then(() => setAvailability(stand.id)) 
     }
   }
+  const deleteNote = (event) => {
+    
+    event.preventDefault()
+    addNote(emptyNote, userStandId)
+}
 
   const renderNoteButtons = () => {
     return(
       <>
+      {console.log(userStandId)}
       <button className="stand__notes__edit" id= {stand.id}>Edit Notes</button>
-      <button className="stand__notes__delete">Delete Note</button>
+      <button className="stand__notes__delete" onClick={() => addNote({note:""}, userStandId )}>Delete Note</button>
       <button className="stand__addNote" onClick={() => { history.push(`/stands/${stand.id}`) }}>Make Note</button>
       </>
     )
@@ -45,10 +50,10 @@ export const StandCard = ({ stand, relationships }) => {
   }
   
   return (
-    <section className="stand">
+    <section className="stand" id={stand.id}>
       <h3 className="stand__name">{stand.name} Stand @ {stand.location}</h3>
       <div className="stand__availability">{stand.availability === true ? "available" : currentUser?.name}</div>
-      <div className="stand__notes">{relationships.map(relationship => relationship.note)}</div>
+      <div className="stand__notes">{relationships.map(relationship => <div>{relationship.note}</div>)}</div>
       <div className="buttonContainer">
         {stand.availability === false ? renderNoteButtons() : ""}
       </div>

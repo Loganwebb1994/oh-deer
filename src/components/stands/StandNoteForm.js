@@ -28,6 +28,8 @@ export const StandNoteForm = () => {
         .then(() => history.push("/"))
     }
 
+  
+
     return(
         <div>
             <label htmlFor="note">Stand Note: </label>

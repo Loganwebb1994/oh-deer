@@ -22,7 +22,7 @@
       "id": 2,
       "name": "East",
       "location": "Neils Field",
-      "availability": false
+      "availability": true
     },
     {
       "id": 3,
@@ -34,7 +34,7 @@
       "id": 4,
       "name": "South",
       "location": "North River Field",
-      "availability": true
+      "availability": false
     },
     {
       "id": 5,
@@ -136,20 +136,20 @@
     },
     {
       "userId": 1,
-      "standId": 1,
-      "note": "",
+      "standId": 2,
+      "note": "make a note",
       "id": 3
     },
     {
       "userId": 1,
-      "standId": 1,
+      "standId": 3,
       "note": "",
       "id": 4
     },
     {
       "userId": 1,
-      "standId": 2,
-      "note": "gonna make a note",
+      "standId": 4,
+      "note": "",
       "id": 5
     }
   ]
