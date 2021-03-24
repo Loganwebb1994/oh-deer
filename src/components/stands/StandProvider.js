@@ -7,6 +7,7 @@ export const StandProvider = (props) => {
     const [stands, setStands] = useState([])
     const [userStands, setUserStands] = useState([])
     const [users, setUsers] = useState([])
+    const [userStandId, setUserStandId] = useState(0)
     // const currentUserId = sessionStorage.getItem("ohDeer_user")
     // const[currentRelationship]
 
@@ -37,7 +38,7 @@ export const StandProvider = (props) => {
           body: JSON.stringify(userStandObj)
         })
         .then(res => res.json())
-        // .then(setUserStands)
+        .then(res => setUserStandId(res.id))
       }
 
     const checkOut = (userObjId) => {
@@ -71,21 +72,21 @@ export const StandProvider = (props) => {
       .then(getStands)
       }
 
-      // const addNote = () => {
-      //   fetch(`http://localhost:8088/userStands?userId=${currentUserId}`, {
-      //   method: "PATCH",
-      //   body: JSON.stringify({
-      //     note: ""
-      //   }),
-      //   headers: {
-      //     "Content-type": "application/json; charset=UTF-8"
-      //   }})
-      // }
+      const addNote = ( noteString, userStandId) => {
+        return fetch(`http://localhost:8088/userStands/${userStandId}`, {
+        method: "PATCH",
+        body: JSON.stringify({
+          note: noteString.note
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8"
+        }})
+      }
           
         
         return(
       <StandContext.Provider value ={{
-        getStands, stands, setStands, getUserStands, setUserStands, reserveStand, setAvailability, checkOut, resetAvailability, userStands, getUsers, users
+        getStands, stands, setStands, getUserStands, setUserStands, reserveStand, setAvailability, checkOut, resetAvailability, userStands, getUsers, users, addNote, userStandId
       }}>
         {props.children}
       </StandContext.Provider>

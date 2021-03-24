@@ -4,6 +4,10 @@
   margin: 50px;
   border: 10px;
   border-color: black;
+  background-color: cadetblue;
+  width: 200px;
+  padding: 50px;
+  height: auto
 }
 .stand__notes__delete{
   width: 100px
@@ -14,4 +18,12 @@
 .standList{
   display: flex;
   flex-wrap: wrap;
+  background-color: cornsilk;
+}
+.toggleButton{
+  height:30px;
+  margin:15px
+}
+header{
+  background-color: darkcyan;
 }
