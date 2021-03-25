@@ -57,7 +57,7 @@ export const StandCard = ({ stand, relationships }) => {
       <div className="stand__availability">{stand.availability === true ? "available" : "occupied"}</div>
       <div className="stand__notes">{relationships.map(relationship => <div>{relationship.note}</div>)}</div>
       <div className="buttonContainer">
-        {stand.availability === false ? renderNoteButtons() : ""}
+        {stand.availability === false && george === true ? renderNoteButtons() : ""}
       </div>
       <div className="buttonContainer">
         {stand.availability === true ? (<button className="stand__reserve" onClick={handleReserve}>Check In</button>) : ""}
