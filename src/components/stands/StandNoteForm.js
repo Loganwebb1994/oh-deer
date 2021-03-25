@@ -22,7 +22,6 @@ export const StandNoteForm = () => {
         console.log(note)
     }, [note])
     const handleInputChange = (event) => {
-        console.log(event)
         const newNote = { ...note }
         newNote[event.target.id] = event.target.value
         setNote(newNote)

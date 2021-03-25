@@ -34,7 +34,7 @@
       "id": 4,
       "name": "South",
       "location": "North River Field",
-      "availability": false
+      "availability": true
     },
     {
       "id": 5,
@@ -124,8 +124,8 @@
   "userStands": [
     {
       "userId": 1,
-      "standId": 7,
-      "note": "note",
+      "standId": 2,
+      "note": "making note",
       "id": 1
     },
     {
@@ -133,42 +133,6 @@
       "standId": 2,
       "note": "",
       "id": 2
-    },
-    {
-      "userId": 1,
-      "standId": 6,
-      "note": "",
-      "id": 3
-    },
-    {
-      "userId": 1,
-      "standId": 6,
-      "note": "making note",
-      "id": 4
-    },
-    {
-      "userId": 1,
-      "standId": 2,
-      "note": "making note",
-      "id": 5
-    },
-    {
-      "userId": 1,
-      "standId": 5,
-      "note": "make a notes",
-      "id": 6
-    },
-    {
-      "userId": 1,
-      "standId": 2,
-      "note": "",
-      "id": 7
-    },
-    {
-      "userId": 1,
-      "standId": 4,
-      "note": "",
-      "id": 8
     }
   ]
 }
