@@ -17,7 +17,15 @@ export const StandCard = ({ stand, relationships }) => {
     getUsers()
 
   }, [])
-
+  useEffect(() =>{
+    relationships.map(relationship => {
+      if (stand.availability === false && currentUserId === relationship.userId){
+        setGeorge(true)
+      }
+      
+    })
+  }, [stands])
+  
   const handleReserve = () => {
     if (stand.availability === true) { 
       const reservationObj = {
@@ -43,14 +51,6 @@ export const StandCard = ({ stand, relationships }) => {
 
   }
 
-  useEffect(() =>{
-    relationships.map(relationship => {
-      if (stand.availability === false && currentUserId === relationship.userId){
-        setGeorge(true)
-      }
-      
-    })
-  }, [stands])
 
   return (
     <section className="stand" id={stand.id}>

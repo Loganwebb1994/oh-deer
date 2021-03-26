@@ -5,44 +5,40 @@ import { useHistory, useParams } from 'react-router-dom';
 
 export const StandNoteForm = () => {
     const history = useHistory()
-    const {getUserStands, addNote, userStandId, getUserStandById} = useContext(StandContext)
+    const {getUserStands, addNote, getUserStandById} = useContext(StandContext)
 
-    const id = useParams("userStandId")
+    const {userStandId} = useParams()
+    console.log(userStandId, "id")
 
     const currentUserId = parseInt(sessionStorage.getItem("ohDeer_user"))
-    const [note, setNote] = useState({
-        note: ""
-    })
+    const [note, setNote] = useState("")
     useEffect(() => {
-        if (id){
-        getUserStandById(id)
-        .then(res => console.log(res))
+        if (userStandId){
+        getUserStandById(userStandId)
+        .then(res => setNote(res.note))
         }
         
     
         }, [])
 
-    useEffect(() => {
-        console.log(note)
-    }, [note])
     const handleInputChange = (event) => {
-        const newNote = { ...note }
-        newNote[event.target.id] = event.target.value
+        let newNote = note 
+        newNote = event.target.value
         setNote(newNote)
     }
 
     const saveNote = (event) => {
         event.preventDefault()
         addNote(note, userStandId)
-        .then(() => history.push("/"))
+        .then(() => history.push("/my-hunts"))
     }
 
 
 
     return(
         <div>
-            <label htmlFor="note">Stand Note: </label>
-            <input id="note" type="textArea" value={note.note} onChange={handleInputChange} />
+            <label htmlFor="note">Note: </label>
+            <input id="note" type="textArea" value={note} onChange={handleInputChange} />
             <button onClick={saveNote}>Save</button>
         </div>
     )
