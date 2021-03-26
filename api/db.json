@@ -22,7 +22,7 @@
       "id": 2,
       "name": "East",
       "location": "Neils Field",
-      "availability": false
+      "availability": true
     },
     {
       "id": 3,
@@ -34,19 +34,19 @@
       "id": 4,
       "name": "South",
       "location": "North River Field",
-      "availability": true
+      "availability": false
     },
     {
       "id": 5,
       "name": "East",
       "location": "North River Field",
-      "availability": true
+      "availability": false
     },
     {
       "id": 6,
       "name": "West",
       "location": "North River Field",
-      "availability": true
+      "availability": false
     },
     {
       "id": 7,
@@ -88,7 +88,7 @@
       "id": 13,
       "name": "East",
       "location": "The Bone Yard",
-      "availability": true
+      "availability": false
     },
     {
       "id": 14,
@@ -128,6 +128,20 @@
       "note": "",
       "timestamp": 1616766191123,
       "id": 1
+    },
+    {
+      "userId": 1,
+      "standId": 2,
+      "note": "shot a beaver",
+      "timestamp": 1616776869310,
+      "id": 78
+    },
+    {
+      "userId": 1,
+      "standId": 2,
+      "note": "shot buck",
+      "timestamp": 1616778173697,
+      "id": 79
     }
   ]
 }

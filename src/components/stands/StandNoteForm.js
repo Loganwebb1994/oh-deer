@@ -1,20 +1,24 @@
 import React, { useContext, useEffect, useState } from "react"
 import { StandContext } from "../stands/StandProvider"
 import "./Stand.css"
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 
 export const StandNoteForm = () => {
     const history = useHistory()
     const {getUserStands, addNote, userStandId, getUserStandById} = useContext(StandContext)
+
+    const id = useParams("userStandId")
 
     const currentUserId = parseInt(sessionStorage.getItem("ohDeer_user"))
     const [note, setNote] = useState({
         note: ""
     })
     useEffect(() => {
-        getUserStands()
-        getUserStandById(userStandId)
-        .then(setNote)
+        if (id){
+        getUserStandById(id)
+        .then(res => console.log(res))
+        }
+        
     
         }, [])
 
