@@ -43,7 +43,6 @@ export const StandCard = ({ stand, relationships }) => {
   const renderNoteButtons = () => {
     return(
       <>
-      {console.log(currentUserId, "!!")}
       <button className="stand__notes__delete" onClick={() => addNote({note:""}, userStandId )}>Delete Note</button>
       <button className="stand__addNote" onClick={() => { history.push(`/stands/${stand.id}`) }}>Notes</button>
       </>
@@ -56,9 +55,6 @@ export const StandCard = ({ stand, relationships }) => {
     <section className="stand" id={stand.id}>
       <h3 className="stand__name">{stand.name} Stand @ {stand.location}</h3>
       <div className="stand__availability">{stand.availability === true ? "available" : "occupied"}</div>
-      <div className="buttonContainer">
-        {stand.availability === false && george === true ? renderNoteButtons() : ""}
-      </div>
       <div className="buttonContainer">
         {stand.availability === true ? (<button className="stand__reserve" onClick={handleReserve}>Check In</button>) : ""}
         {stand.availability === false && george === true ? (<button className="stand__checkOut" onClick={() => { resetAvailability(stand.id) }}>Check Out</button>) : ""}

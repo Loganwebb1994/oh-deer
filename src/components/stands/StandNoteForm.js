@@ -8,7 +8,6 @@ export const StandNoteForm = () => {
     const {getUserStands, addNote, getUserStandById} = useContext(StandContext)
 
     const {userStandId} = useParams()
-    console.log(userStandId, "id")
 
     const currentUserId = parseInt(sessionStorage.getItem("ohDeer_user"))
     const [note, setNote] = useState("")
