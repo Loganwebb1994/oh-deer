@@ -61,7 +61,7 @@ export const StandCard = ({ stand, relationships }) => {
       </div>
       <div className="buttonContainer">
         {stand.availability === true ? (<button className="stand__reserve" onClick={handleReserve}>Check In</button>) : ""}
-        {george === true ? (<button className="stand__checkOut" onClick={() => { resetAvailability(stand.id) }}>Check Out</button>) : ""}
+        {stand.availability === false && george === true ? (<button className="stand__checkOut" onClick={() => { resetAvailability(stand.id) }}>Check Out</button>) : ""}
       </div>
     </section>
   )
