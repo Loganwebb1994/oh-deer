@@ -23,7 +23,8 @@ export const StandCard = ({ stand, relationships }) => {
       const reservationObj = {
         userId: currentUserId,
         standId: stand.id,
-        note: ""
+        note: "",
+        timestamp: Date.now()
       }
       reserveStand(reservationObj)
       .then(() => setAvailability(stand.id)) 
