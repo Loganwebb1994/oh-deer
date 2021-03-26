@@ -6,6 +6,7 @@ import { StandNoteForm } from "./stands/StandNoteForm"
 import { StandProvider } from "./stands/StandProvider"
 import {AvailableStands} from "./stands/AvailableStands"
 import { ReservedStands } from "./stands/ReservedStands"
+import { HuntList } from "./Hunts/HuntList"
 export const ApplicationViews = () => {
     return (
         <>
@@ -22,6 +23,9 @@ export const ApplicationViews = () => {
                   </Route>
                   <Route exact path="/reserved-stands">
                     <ReservedStands/>
+                  </Route>
+                  <Route exact path="/my-hunts">
+                    <HuntList/>
                   </Route>
                 </StandProvider>
 

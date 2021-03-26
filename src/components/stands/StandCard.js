@@ -8,7 +8,7 @@ import { StandContext } from "./StandProvider"
 export const StandCard = ({ stand, relationships }) => {
 
   const [george, setGeorge] = useState(false)
-  const { reserveStand, setAvailability, resetAvailability, userStand, users, getUsers, addNote, userStandId } = useContext(StandContext)
+  const { reserveStand, setAvailability, resetAvailability, stands, users, getUsers, addNote, userStandId, getStands } = useContext(StandContext)
   const currentUserId = parseInt(sessionStorage.getItem("ohDeer_user"))
   const currentUser = users.find(user => user.id === currentUserId)
   const history = useHistory()
@@ -17,13 +17,22 @@ export const StandCard = ({ stand, relationships }) => {
     getUsers()
 
   }, [])
-
+  useEffect(() =>{
+    relationships.map(relationship => {
+      if (stand.availability === false && currentUserId === relationship.userId){
+        setGeorge(true)
+      }
+      
+    })
+  }, [stands])
+  
   const handleReserve = () => {
     if (stand.availability === true) { 
       const reservationObj = {
         userId: currentUserId,
         standId: stand.id,
-        note: ""
+        note: "",
+        timestamp: Date.now()
       }
       reserveStand(reservationObj)
       .then(() => setAvailability(stand.id)) 
@@ -42,20 +51,11 @@ export const StandCard = ({ stand, relationships }) => {
 
   }
 
-  useEffect(() =>{
-    relationships.map(relationship => {
-      if (stand.availability === false && currentUserId === relationship.userId){
-        setGeorge(true)
-      }
-      
-    })
-  }, [])
 
   return (
     <section className="stand" id={stand.id}>
       <h3 className="stand__name">{stand.name} Stand @ {stand.location}</h3>
       <div className="stand__availability">{stand.availability === true ? "available" : "occupied"}</div>
-      <div className="stand__notes">{relationships.map(relationship => <div>{relationship.note}</div>)}</div>
       <div className="buttonContainer">
         {stand.availability === false && george === true ? renderNoteButtons() : ""}
       </div>

@@ -28,25 +28,25 @@
       "id": 3,
       "name": "North",
       "location": "North River Field",
-      "availability": false
+      "availability": true
     },
     {
       "id": 4,
       "name": "South",
       "location": "North River Field",
-      "availability": true
+      "availability": false
     },
     {
       "id": 5,
       "name": "East",
       "location": "North River Field",
-      "availability": true
+      "availability": false
     },
     {
       "id": 6,
       "name": "West",
       "location": "North River Field",
-      "availability": true
+      "availability": false
     },
     {
       "id": 7,
@@ -76,7 +76,7 @@
       "id": 11,
       "name": "South",
       "location": "The Duck Hole",
-      "availability": true
+      "availability": false
     },
     {
       "id": 12,
@@ -88,7 +88,7 @@
       "id": 13,
       "name": "East",
       "location": "The Bone Yard",
-      "availability": true
+      "availability": false
     },
     {
       "id": 14,
@@ -125,26 +125,58 @@
     {
       "userId": 1,
       "standId": 2,
-      "note": "making note",
+      "note": "",
+      "timestamp": 1616766191123,
       "id": 1
+    },
+    {
+      "userId": 2,
+      "standId": 2,
+      "note": "shot a beaver",
+      "timestamp": 1616776869310,
+      "id": 78
+    },
+    {
+      "userId": 1,
+      "standId": 1,
+      "note": "",
+      "timestamp": 1616783997253,
+      "id": 79
+    },
+    {
+      "userId": 1,
+      "standId": 1,
+      "note": "",
+      "timestamp": 1616784002245,
+      "id": 80
     },
     {
       "userId": 1,
       "standId": 2,
       "note": "",
-      "id": 2
+      "timestamp": 1616784003385,
+      "id": 81
     },
     {
       "userId": 1,
       "standId": 3,
       "note": "",
-      "id": 3
+      "timestamp": 1616784004557,
+      "id": 82
+    },
+    {
+      "userId": 1,
+      "standId": 11,
+      "note": "",
+      "timestamp": 1616784510101,
+      "id": 83
     },
     {
       "userId": 1,
       "standId": 3,
       "note": "",
-      "id": 4
+      "timestamp": 1616784517167,
+      "id": 84
     }
   ]
 }
