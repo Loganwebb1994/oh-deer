@@ -25,7 +25,25 @@
   width: 100px
 }
 
+.saveNote{
+  width: 200px;
+  margin-top: 33px;
+
+}
+
 .toggleButton{
   height:30px;
   margin:15px;
+}
+.formContainer{
+  display: flex;
+  justify-content: center;
+}
+.standNoteForm{
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  align-self: center;
+
+
 }
