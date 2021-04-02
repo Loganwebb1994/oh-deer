@@ -35,10 +35,12 @@ export const StandNoteForm = () => {
 
 
     return(
-        <div>
+        <div className="formContainer">
+        <div className="standNoteForm">
             <label htmlFor="note">Note: </label>
-            <input id="note" type="textArea" value={note} onChange={handleInputChange} />
-            <button onClick={saveNote}>Save</button>
+            <textarea id="note" type="textArea" rows="20"  value={note} onChange={handleInputChange} />
+            <button className="saveNote" onClick={saveNote}>Save</button>
+        </div>
         </div>
     )
 }
