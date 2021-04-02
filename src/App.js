@@ -12,9 +12,8 @@ function App() {
   return (
     <div className="ohDeer">
       <header className="ohDeer-header">
-        <div>Oh-Deer</div>
         <nav className="nav">
-          <button className="nev__button" onClick={() => history.push("/")}>Home</button>
+          <button className="nav__Button" onClick={() => history.push("/")}>Home</button>
           <button className="nav__Button" onClick={() => history.push("/available-stands")}>Available</button>
           <button className="nav__Button" onClick={() => history.push("/reserved-stands")}>Occupied</button>
           <button className="nav__Button" onClick={() => history.push("/my-hunts")}>My Hunts</button>

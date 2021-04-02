@@ -7,6 +7,7 @@ export const StandProvider = (props) => {
     const [stands, setStands] = useState([])
     const [userStands, setUserStands] = useState([])
     const [users, setUsers] = useState([])
+    //remove userStandId
     const [userStandId, setUserStandId] = useState(0)
     const [hunts, setHunts] = useState([])
     // const currentUserId = sessionStorage.getItem("ohDeer_user")
@@ -44,6 +45,7 @@ export const StandProvider = (props) => {
           body: JSON.stringify(userStandObj)
         })
         .then(res => res.json())
+        //change last .then to getUserStands
         .then(res => setUserStandId(res.id))
       }
 
@@ -112,4 +114,3 @@ export const StandProvider = (props) => {
     )
     
 }
-    //  { http://localhost:8088/usersStands?_expand=user&_expand=stand} not sure how to implement this yet

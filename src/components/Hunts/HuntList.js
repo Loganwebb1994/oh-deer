@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react"
 import { Route, useHistory } from "react-router-dom"
 import { StandContext } from "../stands/StandProvider"
 import {Hunt} from "./Hunt"
+import "./Hunt.css"
 
 
 export const HuntList = () => {
@@ -14,9 +15,10 @@ export const HuntList = () => {
 
   return (
   <>
+    <section className="huntList">
     { 
-      hunts.filter(hunt => hunt.userId === currentUserId ).map( hunt =><Hunt key={hunt.id} obj={hunt}/>)
-    }
+      hunts.filter(hunt => hunt.userId === currentUserId ).map( hunt =><Hunt key={hunt.id} obj={hunt}/>)}
+    </section>
   </>
   )
 

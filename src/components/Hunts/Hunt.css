@@ -1,0 +1,25 @@
+.hunt{
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+  border: 10px solid #FF370A ;
+  color: #FF370A;
+  border-radius: 4px;
+  background-image: url("../../images/card-background.jpg");
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  width: 200px;
+  padding: 50px;
+  height: auto;
+  align-items: center;
+}
+
+.huntList{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: black;
+  justify-content: center;
+}
+
+.huntButton{
+  width: 100px
+}
