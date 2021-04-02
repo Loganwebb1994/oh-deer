@@ -2,12 +2,21 @@
   display: flex;
   flex-direction: column;
   margin: 50px;
-  border: 10px;
-  border-color: black;
-  background-color: cadetblue;
+  border: 10px solid #FF370A ;
+  color: #FF370A ;
+  border-radius: 4px;
+  background-image: url("../../images/card-background.jpg");
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   width: 200px;
   padding: 50px;
-  height: auto
+  height: auto;
+  align-items: center;
+}
+.standList{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: black;
+  justify-content: center;
 }
 .stand__notes__delete{
   width: 100px
@@ -15,15 +24,8 @@
 .stand__notes__edit{
   width: 100px
 }
-.standList{
-  display: flex;
-  flex-wrap: wrap;
-  background-color: cornsilk;
-}
+
 .toggleButton{
   height:30px;
-  margin:15px
-}
-header{
-  background-color: darkcyan;
+  margin:15px;
 }

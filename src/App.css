@@ -1,38 +1,45 @@
-.App {
+
+button{
+  border-radius: 4px;
+  background-color: #FF370A;
+  border: 2px solid black;
+
+  color: rgb(0, 0, 0);
+  padding: 15px 32px;
   text-align: center;
+  text-decoration: none;
+  display: inline-block;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-image: url("./images/oh-deer-header.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 345px
 }
 
-.App-link {
-  color: #61dafb;
+nav{
+  align-self: center;
+  margin-top: 275px;
+}
+.huntButton{
+  margin-top: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav__Button{
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  background-color: #FF370A;
+  border: 2px solid black;
+  color: rgb(0, 0, 0);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+body{
+  background-color:black;
 }
