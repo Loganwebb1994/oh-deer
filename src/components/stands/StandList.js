@@ -3,6 +3,7 @@ import {useHistory} from "react-router-dom"
 import { StandContext } from "./StandProvider"
 import { StandCard } from "./StandCard"
 import "./Stand.css"
+import "../../App.css"
 
 export const StandList = () => {
   const history = useHistory()

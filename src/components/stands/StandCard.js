@@ -1,7 +1,8 @@
 import React, { useContext, useEffect, useState } from "react"
-import "./Stand.css"
 import { Route, useHistory } from "react-router-dom"
 import { StandContext } from "./StandProvider"
+import "./Stand.css"
+import "../../App.css"
 
 
 //after you take out the hard coded date remember to pass in {props} to Stand()

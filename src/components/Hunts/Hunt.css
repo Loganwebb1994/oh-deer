@@ -13,13 +13,32 @@
   align-items: center;
 }
 
+.standName{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
 .huntList{
   display: flex;
   flex-wrap: wrap;
   background-color: black;
   justify-content: center;
 }
+.bg{
+  border-radius: 4px;
+  background-color: black;
+  padding:10px
+}
+.bgNote{
+  font-size: larger;
+  text-shadow: none;
+  color: black;
+  padding: 3px 0px
+}
 
 .huntButton{
-  width: 100px
+  margin-left: 10px;
+  margin-right: 10px;
 }
