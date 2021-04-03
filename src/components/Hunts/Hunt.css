@@ -32,7 +32,9 @@
   padding:10px
 }
 .bgNote{
-  font-size: larger;
+  font-family: "Bebas Neue";
+  font-weight: 600;
+  font-size: x-large;
   text-shadow: none;
   color: black;
   padding: 3px 0px

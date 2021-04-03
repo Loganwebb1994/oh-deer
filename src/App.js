@@ -13,6 +13,8 @@ function App() {
     <div className="ohDeer">
       <head>
       <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet"/>
+      <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap" rel="stylesheet"></link>
+      <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"></link>
       </head>
       <header className="ohDeer-header">
         <nav className="nav">
