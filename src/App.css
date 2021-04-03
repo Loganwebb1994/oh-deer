@@ -3,12 +3,17 @@ button{
   border-radius: 4px;
   background-color: #FF370A;
   border: 2px solid black;
-
+  font-family: "Anton", sans-serif;
+  font-size: larger;
   color: rgb(0, 0, 0);
-  padding: 15px 32px;
+  padding: 5px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
+}
+.navBorder{
+  height: 2px;
+  background-color:#FF370A ;
 }
 header{
   display: flex;
@@ -16,10 +21,16 @@ header{
   background-image: url("./images/oh-deer-header.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  height: 345px
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover
+  
 }
 
 nav{
+  display: flex;
+  flex-direction: row;
   align-self: center;
   margin-top: 275px;
 }
@@ -28,14 +39,17 @@ nav{
 }
 
 .nav__Button{
-  margin-left: 175px;
-  margin-right: 175px;
+  font-family: "Anton", sans-serif;
+  font-size: larger;
+  margin-top: 20px;
+  margin-left: 66px;
+  margin-right: 66px;
   margin-bottom: 20px;
   border-radius: 4px;
   background-color: #FF370A;
   border: 2px solid black;
   color: rgb(0, 0, 0);
-  padding: 15px 32px;
+  padding: 5px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;

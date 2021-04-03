@@ -11,6 +11,9 @@ function App() {
   const history = useHistory()
   return (
     <div className="ohDeer">
+      <head>
+      <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet"/>
+      </head>
       <header className="ohDeer-header">
         <nav className="nav">
           <button className="nav__Button" onClick={() => history.push("/")}>Home</button>
@@ -19,6 +22,7 @@ function App() {
           <button className="nav__Button" onClick={() => history.push("/my-hunts")}>My Hunts</button>
         </nav>
       </header>
+      <div className="navBorder"></div>
       <Route render={() => {
         if (sessionStorage.getItem(userStorageKey)) {
           return (

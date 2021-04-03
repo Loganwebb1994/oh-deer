@@ -3,6 +3,7 @@ import { StandContext } from "./StandProvider"
 import { StandCard } from "./StandCard"
 import { Route, useHistory } from "react-router-dom"
 import "./Stand.css"
+import "../../App.css"
 
 export const AvailableStands = () => {
   const history = useHistory()

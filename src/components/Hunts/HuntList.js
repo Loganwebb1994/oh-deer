@@ -3,6 +3,7 @@ import { Route, useHistory } from "react-router-dom"
 import { StandContext } from "../stands/StandProvider"
 import {Hunt} from "./Hunt"
 import "./Hunt.css"
+import "../../App.css"
 
 
 export const HuntList = () => {
