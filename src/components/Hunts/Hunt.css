@@ -6,18 +6,26 @@
   color: #FF370A;
   border-radius: 4px;
   background-image: url("../../images/card-background.jpg");
-  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+ 
   width: 200px;
   padding: 50px;
   height: auto;
   align-items: center;
   box-shadow: 10px 10px 30px black;
+  
 }
 
+.date{
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
 .standName{
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "Bebas Neue";
+  letter-spacing: 3.5px;
+  font-size: x-large;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 
 
