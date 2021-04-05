@@ -17,6 +17,7 @@ function App() {
       <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"></link>
       </head>
       <header className="ohDeer-header">
+        <img className="ohDeerLogo" src="../OH-Deer-L.png" alt="Logo"/>
         <nav className="nav">
           <button className="nav__Button" onClick={() => history.push("/")}>Home</button>
           <button className="nav__Button" onClick={() => history.push("/available-stands")}>Available</button>
