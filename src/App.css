@@ -18,21 +18,28 @@ button{
 header{
   display: flex;
   flex-direction: column;
-  background-image: url("./images/oh-deer-header.jpg");
+  background-image: url("./images/card-background.jpg");
   background-position: center;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover
+  background-size: cover;
+  justify-content: center;
+  align-content: center;
+  height: 350px;
   
+}
+.ohDeerLogo{
+  width:600px;
+  margin: auto auto
+
 }
 
 nav{
   display: flex;
   flex-direction: row;
   align-self: center;
-  margin-top: 275px;
 }
 .huntButton{
   margin-top: 15px;
