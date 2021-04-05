@@ -15,7 +15,7 @@
 .standList{
   display: flex;
   flex-wrap: wrap;
-  background-color: black;
+  background-color:#1B1B1B;
   justify-content: center;
 }
 .stand__notes__delete{

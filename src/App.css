@@ -12,7 +12,7 @@ button{
   display: inline-block;
 }
 .navBorder{
-  height: 2px;
+  height: 4px;
   background-color:#FF370A ;
 }
 header{
@@ -62,5 +62,5 @@ nav{
   display: inline-block;
 }
 body{
-  background-color:black;
+  background-color:#1B1B1B;
 }
