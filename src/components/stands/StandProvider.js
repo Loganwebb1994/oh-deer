@@ -95,6 +95,7 @@ export const StandProvider = (props) => {
       const getHunts = () => {
         return fetch("http://localhost:8088/userStands?_expand=stand")
         .then(res => res.json())
+        // .then(res => res.sort(function(a, b){return b - a}))
         .then(res => setHunts(res))
       }
 
