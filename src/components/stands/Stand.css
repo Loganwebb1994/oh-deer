@@ -12,6 +12,8 @@
   height: auto;
   align-items: center;
   box-shadow: 10px 10px 30px black;
+  font-family: "Bebas Neue";
+  letter-spacing: 3.5px;
 }
 .standList{
   display: flex;
