@@ -10,6 +10,7 @@ button{
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  box-shadow: 10px 10px 25px black;
 }
 .navBorder{
   height: 4px;
@@ -31,9 +32,8 @@ header{
   
 }
 .ohDeerLogo{
-  width:600px;
+  width:700px;
   margin: auto auto
-
 }
 
 nav{
