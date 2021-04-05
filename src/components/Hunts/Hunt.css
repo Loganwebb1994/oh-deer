@@ -11,6 +11,7 @@
   padding: 50px;
   height: auto;
   align-items: center;
+  box-shadow: 10px 10px 30px black;
 }
 
 .standName{
@@ -23,7 +24,7 @@
 .huntList{
   display: flex;
   flex-wrap: wrap;
-  background-color: black;
+  background-color:#1B1B1B;
   justify-content: center;
 }
 .bg{
