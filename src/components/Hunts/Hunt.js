@@ -4,7 +4,7 @@ import { StandContext } from "../stands/StandProvider"
 import "./Hunt.css"
 import "../../App.css"
 
-
+//html representation of one hunt
 export const Hunt = ({obj}) => {
   const history = useHistory()
 
