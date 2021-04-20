@@ -14,30 +14,30 @@ export const StandProvider = (props) => {
     // const[currentRelationship]
 
     const getUsers = () => {
-      return fetch("http://localhost:8088/users")
+      return fetch("https://oh-deer-api.herokuapp.com/users")
         .then(res => res.json())
         .then(setUsers)
     }
 
     const getStands = () => {
-      return fetch("http://localhost:8088/stands")
+      return fetch("https://oh-deer-api.herokuapp.com/stands")
         .then(res => res.json())
         .then(setStands)
     }
 
     const getUserStands = () => {
-      return fetch(`http://localhost:8088/userStands`)
+      return fetch(`https://oh-deer-api.herokuapp.com/userStands`)
         .then(res => res.json())
         .then(setUserStands)
     }
 
     const getUserStandById = (id) => {
-      return fetch(`http://localhost:8088/userStands/${id}`)
+      return fetch(`https://oh-deer-api.herokuapp.com/userStands/${id}`)
       .then(res => res.json())
     }
 
     const reserveStand = (userStandObj) => {
-      return fetch("http://localhost:8088/userStands", {
+      return fetch("https://oh-deer-api.herokuapp.com/userStands", {
           method: "POST",
           headers: {
               "Content-Type": "application/json"
@@ -50,14 +50,14 @@ export const StandProvider = (props) => {
       }
 
     const checkOut = (userObjId) => {
-      return fetch(`http://localhost:8088/userStands/${userObjId}`, {
+      return fetch(`https://oh-deer-api.herokuapp.com/${userObjId}`, {
           method: "DELETE"
       })
           .then(getUserStands)
     }
       
       const setAvailability = (standId) => {
-      fetch(`http://localhost:8088/stands/${standId}`, {
+      fetch(`https://oh-deer-api.herokuapp.com/stands/${standId}`, {
         method: "PATCH",
         body: JSON.stringify({
           availability: false
@@ -69,7 +69,7 @@ export const StandProvider = (props) => {
       }
 
       const resetAvailability = (standId) => {
-        fetch(`http://localhost:8088/stands/${standId}`, {
+        fetch(`https://oh-deer-api.herokuapp.com/stands/${standId}`, {
         method: "PATCH",
         body: JSON.stringify({
           availability: true
@@ -81,7 +81,7 @@ export const StandProvider = (props) => {
       }
 
       const addNote = ( noteString, userStandId) => {
-        return fetch(`http://localhost:8088/userStands/${userStandId}`, {
+        return fetch(`https://oh-deer-api.herokuapp.com/userStands/${userStandId}`, {
         method: "PATCH",
         body: JSON.stringify({
           note: noteString
@@ -93,14 +93,14 @@ export const StandProvider = (props) => {
       }
           
       const getHunts = () => {
-        return fetch("http://localhost:8088/userStands?_expand=stand")
+        return fetch("https://oh-deer-api.herokuapp.com/userStands?_expand=stand")
         .then(res => res.json())
         // .then(res => res.sort(function(a, b){return b - a}))
         .then(res => setHunts(res))
       }
 
       const deleteHunt = (id) => {
-      return fetch(`http://localhost:8088/userStands/${id}`,{
+      return fetch(`https://oh-deer-api.herokuapp.com/userStands/${id}`,{
         method:"DELETE"
       })
       .then(getHunts)
